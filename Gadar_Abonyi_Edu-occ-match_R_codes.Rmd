@@ -3,7 +3,7 @@ title: "Graph Configuration Model based Evaluation of the Education-Occupation M
 subtitle: "related R codes"
 author: Laszlo Gadar, Janos Abonyi
 date: 01/02/2017
-output: pdf_document
+output: html_document
 always_allow_html: yes
 ---
 
@@ -32,7 +32,7 @@ library(readxl)
 #1. Load data
 
 ```{r create_dataframe_and_graph, echo=F, warning=F, message=F}
-db<-read.csv("E:/Dropbox/GL_AJ_Edumining/Cikk_0_PLOS_ONE/file/graph_of_hungarian_HE.csv", sep=";", header=T, encoding = "ISO-8859-3", na.strings="NA", stringsAsFactors = F)
+db<-read.csv("graph_of_hungarian_HE.csv", sep=";", header=T, encoding = "UTF-8", na.strings="NA", stringsAsFactors = F)
 
 edges<-db %>% filter(Grad_level=="B") %>% select(Pr_ENG_bachelor,ISCO3)
 
